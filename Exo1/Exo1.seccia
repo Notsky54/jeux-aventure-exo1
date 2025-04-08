@@ -145,7 +145,7 @@
 ]
 }
 ],
-"exit": "// Assign an object to the player\r\ncontrol P_HERO O_HERO\r\n\r\n// Change the current player\r\nswitch P_HERO\r\n\r\n// Change the current scene\r\njump S_CITY"
+"exit": "// Assign an object to the player\r\ncontrol P_HERO O_HERO\r\n\r\n// Change the current player\r\nswitch P_HERO\r\n\r\n// Change the current scene\r\njump S_CITY_1"
 },
 {
 "type": 260,
@@ -235,7 +235,7 @@
 }
 ],
 "varCmp": "==",
-"scene": "S_CITY",
+"scene": "S_CITY_1",
 "obj": "O_HERO"
 },
 {
@@ -270,7 +270,7 @@
 }
 ],
 "varCmp": "==",
-"scene": "S_CITY",
+"scene": "S_CITY_1",
 "obj": "O_TRADER_1"
 },
 {
@@ -369,11 +369,11 @@
 "opacitySpeed": 100
 }
 },
-"nextID": 7,
+"nextID": 8,
 "role": "R_HOME",
-"zoom": 55,
-"x": 63,
-"y": 61
+"zoom": 40,
+"x": -56,
+"y": -59
 },
 "objects": [
 {
@@ -10738,7 +10738,88 @@
 }
 ],
 "sid": 1,
-"uid": "S_CITY"
+"uid": "S_CITY_1"
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 50,
+"nextID": 1,
+"x": -52,
+"y": 19
+},
+"sid": 13,
+"uid": "S_CITY_2"
 }
 ],
 "dialogs": [
@@ -11123,7 +11204,8 @@
 "name": "BR"
 }
 ],
-"flip": true
+"flip": true,
+"loopCount": -1
 },
 {
 "name": "ATTACK",
@@ -12758,6 +12840,248 @@
 }
 ]
 }
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1,
+"width": 1920,
+"height": 912
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "e5936711f4189253a170d780433cf3a5",
+"wtrim": 1920,
+"htrim": 912,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 1924,
+"hdraw": 916
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 12,
+"uid": "O_WALL",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 1920,
+"h": 912
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 14,
+"uid": "O_TRADER_2"
 }
 ],
 "players": [
@@ -12772,6 +13096,6 @@
 }
 ],
 "meta": {
-"nextAssetID": 12
+"nextAssetID": 15
 }
 }
