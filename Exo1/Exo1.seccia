@@ -130,7 +130,7 @@
 "scenario": {
 "board": {
 "nextid": 37,
-"x": 128,
+"x": 384,
 "sections": [
 {
 "name": "START",
@@ -10919,16 +10919,10 @@
 "sentences": [
 {
 "id": 3,
-"text": {
-"en": "Yo le noir ça va"
-},
 "speaker": "O_TRADER_1"
 },
 {
 "id": 4,
-"text": {
-"en": "T'as pas une bombe ?"
-},
 "speaker": "O_TRADER_1"
 }
 ]
@@ -10944,16 +10938,10 @@
 "sentences": [
 {
 "id": 2,
-"text": {
-"en": "Tu veux quoi la pute?"
-},
 "speaker": "O_HERO"
 },
 {
 "id": 5,
-"text": {
-"en": "T'es qui pour me demander sa."
-},
 "speaker": "O_HERO"
 }
 ]
