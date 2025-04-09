@@ -130,7 +130,6 @@
 "scenario": {
 "board": {
 "nextid": 37,
-"x": 384,
 "sections": [
 {
 "name": "START",
@@ -275,16 +274,18 @@
 "roles": [
 {
 "sid": 2,
-"uid": "R_HOME",
+"uid": "R_CITY_1",
 "graph": {
 "board": {
 "nextid": 19,
-"x": 421,
-"y": 300,
+"x": 515,
+"y": 359,
 "boxes": [
 {
 "type": 257,
 "id": 1,
+"x": -136,
+"y": 11,
 "plugs": [
 {
 "id": 2,
@@ -311,8 +312,8 @@
 {
 "type": 1287,
 "id": 6,
-"x": -4,
-"y": 129,
+"x": -17,
+"y": 73,
 "plugs": [
 {
 "id": 7,
@@ -341,13 +342,14 @@
 "type": 3
 }
 ],
-"dialog": "D_TRADER_1"
+"dialog": "D_TRADER_1",
+"sentence": "5"
 },
 {
 "type": 1287,
 "id": 14,
-"x": -5,
-"y": 227,
+"x": -22,
+"y": 198,
 "plugs": [
 {
 "id": 15,
@@ -359,13 +361,13 @@
 ],
 "varCmp": "==",
 "scene": "S_CITY_1",
-"obj": "O_TRADER_1"
+"obj": "O_COIN_SILVER"
 },
 {
 "type": 781,
 "id": 16,
-"x": 157,
-"y": 229,
+"x": 169,
+"y": 281,
 "plugs": [
 {
 "id": 17,
@@ -377,6 +379,188 @@
 }
 ],
 "dialog": "D_HERO"
+}
+]
+}
+}
+},
+{
+"sid": 15,
+"uid": "R_GAME",
+"graph": {
+"board": {
+"nextid": 3,
+"x": 7,
+"y": 22,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"x": 221,
+"y": 208,
+"plugs": [
+{
+"id": 2,
+"type": 3
+}
+]
+}
+]
+}
+}
+},
+{
+"sid": 16,
+"uid": "R_HERO",
+"graph": {
+"board": {
+"nextid": 48,
+"x": 578,
+"y": 291,
+"boxes": [
+{
+"type": 1290,
+"id": 3,
+"x": 369,
+"y": 271,
+"plugs": [
+{
+"id": 4,
+"type": 3,
+"trgs": [
+38
+]
+}
+],
+"varCmp": "==",
+"obj": "O_COIN_SILVER",
+"obj2": "O_GEMS"
+},
+{
+"type": 1290,
+"id": 5,
+"x": 364,
+"y": 493,
+"plugs": [
+{
+"id": 6,
+"type": 3,
+"trgs": [
+32
+]
+}
+],
+"varCmp": "==",
+"obj": "O_COLORSPRAY"
+},
+{
+"type": 781,
+"id": 31,
+"x": 585,
+"y": 528,
+"plugs": [
+{
+"id": 32,
+"type": 2
+},
+{
+"id": 33,
+"type": 3,
+"trgs": [
+35
+]
+}
+],
+"dialog": "D_HERO",
+"sentence": "4"
+},
+{
+"type": 780,
+"id": 34,
+"x": 775,
+"y": 578,
+"plugs": [
+{
+"id": 35,
+"type": 2
+},
+{
+"id": 36,
+"type": 3
+}
+]
+},
+{
+"type": 781,
+"id": 37,
+"x": 587,
+"y": 335,
+"plugs": [
+{
+"id": 38,
+"type": 2
+},
+{
+"id": 39,
+"type": 3,
+"trgs": [
+41
+]
+}
+],
+"dialog": "D_HERO",
+"sentence": "4"
+},
+{
+"type": 780,
+"id": 40,
+"x": 791,
+"y": 372,
+"plugs": [
+{
+"id": 41,
+"type": 2
+},
+{
+"id": 42,
+"type": 3
+}
+]
+},
+{
+"type": 1290,
+"id": 43,
+"x": 377,
+"y": 623,
+"plugs": [
+{
+"id": 44,
+"type": 3,
+"trgs": [
+46
+]
+}
+],
+"order": 10,
+"varCmp": "=="
+},
+{
+"type": 781,
+"id": 45,
+"x": 535,
+"y": 668,
+"plugs": [
+{
+"id": 46,
+"type": 2
+},
+{
+"id": 47,
+"type": 3
+}
+],
+"dialog": "D_HERO",
+"sentence": "3"
 }
 ]
 }
@@ -458,7 +642,7 @@
 }
 },
 "nextID": 8,
-"role": "R_HOME",
+"role": "R_CITY_1",
 "zoom": 40,
 "x": -56,
 "y": -59
@@ -10919,11 +11103,14 @@
 "sentences": [
 {
 "id": 3,
-"speaker": "O_TRADER_1"
+"speaker": "O_HERO",
+"text": {
+"en": "It's not a good idea.\r\n\r\nWhat?\r\n\r\nNope.\r\n\r\nI don't understand how I could use these both together."
+}
 },
 {
 "id": 4,
-"speaker": "O_TRADER_1"
+"speaker": "O_HERO"
 }
 ]
 },
@@ -10937,16 +11124,30 @@
 "sentence": {
 "sentences": [
 {
-"id": 2,
-"speaker": "O_HERO"
+"id": 7,
+"choice": true,
+"text": {
+"en": "I don't have any coins"
+},
+"sentences": [
+{
+"id": 10,
+"text": {
+"en": "I can't give you COLORSPRAY.\r\n\r\nCome back when you have enough."
+},
+"speaker": "O_TRADER_1",
+"exit": true
+}
+],
+"neverHide": true
 },
 {
-"id": 5,
-"speaker": "O_HERO"
+"id": 8,
+"choice": true
 }
 ]
 },
-"nextID": 6
+"nextID": 11
 }
 }
 ],
@@ -13316,6 +13517,6 @@
 }
 ],
 "meta": {
-"nextAssetID": 15
+"nextAssetID": 17
 }
 }
