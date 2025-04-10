@@ -64,12 +64,11 @@
 },
 "bag": {
 "active": true,
-"x": 1696,
+"x": 1560,
 "width": 128,
 "height": 128,
 "horz": 2,
-"rclick": true,
-"y": 752
+"rclick": true
 },
 "detach": {
 "y": 128,
@@ -130,7 +129,7 @@
 },
 "scenario": {
 "board": {
-"nextid": 87,
+"nextid": 96,
 "x": -291,
 "sections": [
 {
@@ -225,7 +224,7 @@
 "id": 30,
 "type": 3,
 "trgs": [
-53
+89
 ]
 }
 ],
@@ -246,7 +245,8 @@
 "id": 39,
 "type": 3,
 "trgs": [
-56
+56,
+94
 ]
 }
 ],
@@ -317,7 +317,7 @@
 "type": 256,
 "id": 52,
 "name": "#pie_BuyCOLORSPRAY",
-"x": 1056,
+"x": 1136,
 "y": 216,
 "plugs": [
 {
@@ -338,7 +338,7 @@
 "id": 55,
 "name": "#pie_BuyCOINS",
 "x": 856,
-"y": 216,
+"y": 128,
 "plugs": [
 {
 "id": 56,
@@ -434,6 +434,58 @@
 ]
 }
 ]
+},
+{
+"type": 261,
+"id": 87,
+"name": "or",
+"x": 984,
+"y": 264,
+"plugs": [
+{
+"id": 88,
+"type": 2
+},
+{
+"id": 89,
+"type": 2
+},
+{
+"id": 90,
+"type": 3,
+"trgs": [
+53
+]
+},
+{
+"id": 91,
+"type": 3
+},
+{
+"id": 92,
+"type": 3
+}
+]
+},
+{
+"type": 256,
+"id": 93,
+"name": "#GetCoins",
+"x": 856,
+"y": 216,
+"plugs": [
+{
+"id": 94,
+"type": 2
+},
+{
+"id": 95,
+"type": 3,
+"trgs": [
+88
+]
+}
+]
 }
 ]
 }
@@ -444,7 +496,7 @@
 "uid": "R_HOME",
 "graph": {
 "board": {
-"nextid": 47,
+"nextid": 49,
 "x": 439,
 "y": 367,
 "boxes": [
@@ -599,24 +651,6 @@
 "puzzle": "#GetGems"
 },
 {
-"type": 1287,
-"id": 33,
-"x": 418,
-"y": 233,
-"plugs": [
-{
-"id": 34,
-"type": 3,
-"trgs": [
-39
-]
-}
-],
-"varCmp": "==",
-"scene": "S_CITY_1",
-"obj": "O_BIN_2"
-},
-{
 "type": 775,
 "id": 38,
 "x": 609,
@@ -635,6 +669,25 @@
 "durationOut": "0",
 "durationWait": "0",
 "durationIn": "0"
+},
+{
+"type": 1283,
+"id": 47,
+"x": 406,
+"y": 209,
+"plugs": [
+{
+"id": 48,
+"type": 3,
+"trgs": [
+39
+]
+}
+],
+"varCmp": "==",
+"scene": "S_CITY_1",
+"door": "DOOR",
+"mode": "WALK"
 }
 ]
 }
@@ -666,26 +719,8 @@
 "uid": "R_CITY_2",
 "graph": {
 "board": {
-"nextid": 33,
+"nextid": 35,
 "boxes": [
-{
-"type": 1287,
-"id": 3,
-"x": 459,
-"y": 359,
-"plugs": [
-{
-"id": 4,
-"type": 3,
-"trgs": [
-6
-]
-}
-],
-"varCmp": "==",
-"scene": "S_CITY_2",
-"obj": "O_MFIRE"
-},
 {
 "type": 775,
 "id": 5,
@@ -701,7 +736,7 @@
 "type": 3
 }
 ],
-"scene": "S_RAOD",
+"scene": "S_ROAD",
 "durationOut": "0",
 "durationWait": "0",
 "durationIn": "0"
@@ -830,6 +865,25 @@
 }
 ],
 "puzzle": "#GetGems"
+},
+{
+"type": 1283,
+"id": 33,
+"x": 510,
+"y": 339,
+"plugs": [
+{
+"id": 34,
+"type": 3,
+"trgs": [
+6
+]
+}
+],
+"varCmp": "==",
+"scene": "S_CITY_2",
+"door": "DOOR",
+"mode": "WALK"
 }
 ]
 }
@@ -840,7 +894,7 @@
 "uid": "R_ROAD",
 "graph": {
 "board": {
-"nextid": 8,
+"nextid": 10,
 "x": 208,
 "y": 82,
 "boxes": [
@@ -853,24 +907,6 @@
 "type": 3
 }
 ]
-},
-{
-"type": 1287,
-"id": 3,
-"x": 279,
-"y": 275,
-"plugs": [
-{
-"id": 4,
-"type": 3,
-"trgs": [
-6
-]
-}
-],
-"varCmp": "==",
-"scene": "S_RAOD",
-"obj": "O_BIN"
 },
 {
 "type": 775,
@@ -887,10 +923,29 @@
 "type": 3
 }
 ],
-"scene": "S_CITY_1",
+"scene": "S_CITY_3",
 "durationOut": "0",
 "durationWait": "0",
 "durationIn": "0"
+},
+{
+"type": 1283,
+"id": 8,
+"x": 278,
+"y": 267,
+"plugs": [
+{
+"id": 9,
+"type": 3,
+"trgs": [
+6
+]
+}
+],
+"varCmp": "==",
+"scene": "S_ROAD",
+"door": "DOOR",
+"mode": "WALK"
 }
 ]
 }
@@ -912,7 +967,8 @@
 "parallax": 100,
 "opacityMin": 100,
 "opacityMax": 100,
-"opacitySpeed": 100
+"opacitySpeed": 100,
+"hiddenEditor": true
 },
 "MB": {
 "speedX": 100,
@@ -944,8 +1000,7 @@
 "parallax": 100,
 "opacityMin": 100,
 "opacityMax": 100,
-"opacitySpeed": 100,
-"hiddenEditor": true
+"opacitySpeed": 100
 },
 "FB": {
 "speedX": 100,
@@ -972,11 +1027,11 @@
 "opacitySpeed": 100
 }
 },
-"nextID": 15,
+"nextID": 19,
 "role": "R_HOME",
-"zoom": 70,
-"x": -11,
-"y": 90
+"zoom": 40,
+"x": -327,
+"y": -241
 },
 "objects": [
 {
@@ -12090,154 +12145,26 @@
 {},
 {}
 ]
-},
-{
-"uid": "O_COIN_SILVER",
-"depths": [
-{
-"a": 200,
-"b": 100
-},
-{
-"y": 1072,
-"a": 200,
-"b": 100
-}
-],
-"id": 5,
-"tags": [
-"",
-"",
-"",
-""
-],
-"x": 465,
-"y": 695,
-"parallax": 100,
-"lightAmbient": 255,
-"lightDiffuse": 16777215,
-"lightAngle": 30,
-"lightDist": -1,
-"grids": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"paths": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-]
-},
-{
-"uid": "O_GEMS",
-"depths": [
-{
-"a": 200,
-"b": 100
-},
-{
-"y": 1072,
-"a": 200,
-"b": 100
-}
-],
-"id": 8,
-"tags": [
-"",
-"",
-"",
-""
-],
-"x": 673,
-"y": 570,
-"parallax": 100,
-"lightAmbient": 255,
-"lightDiffuse": 16777215,
-"lightAngle": 30,
-"lightDist": -1,
-"grids": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"paths": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-]
-},
-{
-"uid": "O_BIN_2",
-"depths": [
-{
-"a": 100,
-"b": 100
-},
-{
-"y": 1072,
-"a": 100,
-"b": 100
-}
-],
-"id": 14,
-"tags": [
-"",
-"",
-"",
-""
-],
-"x": 1,
-"y": 205,
-"parallax": 100,
-"lightAmbient": 255,
-"lightDiffuse": 16777215,
-"lightAngle": 30,
-"lightDist": -1,
-"grids": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"paths": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-]
 }
 ],
 "sid": 1,
-"uid": "S_CITY_1"
+"uid": "S_CITY_1",
+"doors": [
+{
+"name": "DOOR",
+"id": 18,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 1817,
+"y": 665,
+"width": 105,
+"height": 416
+}
+]
 },
 {
 "scene": {
@@ -12312,10 +12239,10 @@
 "opacitySpeed": 100
 }
 },
-"zoom": 100,
-"nextID": 5,
-"x": 411,
-"y": 351,
+"zoom": 95,
+"nextID": 8,
+"x": 800,
+"y": 46,
 "backBlend": "Default"
 },
 "sid": 13,
@@ -17557,43 +17484,6 @@
 ]
 },
 {
-"uid": "O_MFIRE",
-"id": 3,
-"tags": [
-"",
-"",
-"",
-""
-],
-"x": 1915,
-"y": 877,
-"parallax": 100,
-"lightAmbient": 255,
-"lightDiffuse": 16777215,
-"lightAngle": 30,
-"lightDist": -1,
-"grids": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"paths": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-]
-},
-{
 "uid": "O_TELEPHONE",
 "id": 4,
 "tags": [
@@ -17602,8 +17492,8 @@
 "",
 ""
 ],
-"x": 1111,
-"y": 413,
+"x": 1113,
+"y": 414,
 "parallax": 100,
 "lightAmbient": 255,
 "lightDiffuse": 16777215,
@@ -17629,6 +17519,22 @@
 {},
 {}
 ]
+}
+],
+"doors": [
+{
+"name": "DOOR",
+"id": 7,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 1820,
+"y": 710,
+"width": 101,
+"height": 370
 }
 ]
 },
@@ -17787,98 +17693,28 @@
 }
 },
 "zoom": 100,
-"nextID": 3,
-"x": -750,
-"y": 206
+"nextID": 5,
+"x": 106,
+"y": -146
 },
-"objects": [
-{
-"uid": "O_BIN",
-"depths": [
-{
-"a": 50,
-"b": 100
-},
-{
-"y": 1072,
-"a": 50,
-"b": 100
-}
-],
-"id": 1,
-"tags": [
-"",
-"",
-"",
-""
-],
-"x": 1860,
-"y": 853,
-"parallax": 100,
-"lightAmbient": 255,
-"lightDiffuse": 16777215,
-"lightAngle": 30,
-"lightDist": -1,
-"grids": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"paths": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-]
-},
-{
-"uid": "O_MFIRE",
-"id": 2,
-"tags": [
-"",
-"",
-"",
-""
-],
-"y": 877,
-"parallax": 100,
-"lightAmbient": 255,
-"lightDiffuse": 16777215,
-"lightAngle": 30,
-"lightDist": -1,
-"grids": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"paths": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-]
-}
-],
 "sid": 20,
-"uid": "S_RAOD"
+"uid": "S_ROAD",
+"doors": [
+{
+"name": "DOOR",
+"id": 4,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 1825,
+"y": 802,
+"width": 93,
+"height": 278
+}
+]
 }
 ],
 "dialogs": [
