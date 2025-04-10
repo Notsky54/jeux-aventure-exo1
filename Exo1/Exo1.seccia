@@ -129,8 +129,8 @@
 },
 "scenario": {
 "board": {
-"nextid": 37,
-"x": 384,
+"nextid": 87,
+"x": 349,
 "sections": [
 {
 "name": "START",
@@ -143,7 +143,7 @@
 },
 {
 "name": "MAP",
-"width": 256,
+"width": 176,
 "diagram": {
 "board": {
 "nextid": 1
@@ -152,7 +152,7 @@
 },
 {
 "name": "GAME",
-"width": 864,
+"width": 1496,
 "diagram": {
 "board": {
 "nextid": 1
@@ -190,37 +190,17 @@
 "id": 2,
 "type": 3,
 "trgs": [
-9
+82
 ]
 }
 ],
 "exit": "// Assign an object to the player\r\ncontrol P_HERO O_HERO\r\n\r\n// Change the current player\r\nswitch P_HERO\r\n\r\n// Change the current scene\r\njump S_CITY_1"
 },
 {
-"type": 258,
-"id": 8,
-"name": "#pie",
-"x": 448,
-"y": 216,
-"plugs": [
-{
-"id": 9,
-"type": 2
-},
-{
-"id": 10,
-"type": 3,
-"trgs": [
-29
-]
-}
-]
-},
-{
 "type": 260,
 "id": 14,
 "name": "end",
-"x": 1576,
+"x": 2208,
 "y": 216,
 "plugs": [
 {
@@ -232,9 +212,9 @@
 {
 "type": 256,
 "id": 28,
-"name": "#box",
+"name": "#pie_GetGems",
 "x": 856,
-"y": 216,
+"y": 304,
 "plugs": [
 {
 "id": 29,
@@ -244,24 +224,209 @@
 "id": 30,
 "type": 3,
 "trgs": [
-35
+53
+]
+}
+],
+"exit": "take P_HERO O_GEMS"
+},
+{
+"type": 256,
+"id": 37,
+"name": "#pie_GetCoins",
+"x": 632,
+"y": 216,
+"plugs": [
+{
+"id": 38,
+"type": 2
+},
+{
+"id": 39,
+"type": 3,
+"trgs": [
+56
+]
+}
+],
+"exit": "take P_HERO O_COIN_SILVER"
+},
+{
+"type": 256,
+"id": 40,
+"name": "#pie_GetCOLORSPRAY",
+"x": 1320,
+"y": 216,
+"plugs": [
+{
+"id": 41,
+"type": 2
+},
+{
+"id": 42,
+"type": 3,
+"trgs": [
+62
+]
+}
+],
+"exit": "take P_HERO O_COLORSPRAY"
+},
+{
+"type": 256,
+"id": 43,
+"name": "#pie_Graff",
+"x": 1664,
+"y": 216,
+"plugs": [
+{
+"id": 44,
+"type": 2
+},
+{
+"id": 45,
+"type": 3,
+"trgs": [
+85
+]
+}
+]
+},
+{
+"type": 256,
+"id": 49,
+"name": "#pie_askCOLORSPRAY",
+"x": 624,
+"y": 128,
+"plugs": [
+{
+"id": 50,
+"type": 2
+},
+{
+"id": 51,
+"type": 3,
+"trgs": [
+56
+]
+}
+]
+},
+{
+"type": 256,
+"id": 52,
+"name": "#pie_BuyCOLORSPRAY",
+"x": 1056,
+"y": 216,
+"plugs": [
+{
+"id": 53,
+"type": 2
+},
+{
+"id": 54,
+"type": 3,
+"trgs": [
+41
+]
+}
+]
+},
+{
+"type": 256,
+"id": 55,
+"name": "#pie_BuyCOINS",
+"x": 856,
+"y": 216,
+"plugs": [
+{
+"id": 56,
+"type": 2
+},
+{
+"id": 57,
+"type": 3,
+"trgs": [
+53
+]
+}
+]
+},
+{
+"type": 256,
+"id": 58,
+"name": "#pie_GetINDICE",
+"x": 624,
+"y": 304,
+"plugs": [
+{
+"id": 59,
+"type": 2
+},
+{
+"id": 60,
+"type": 3,
+"trgs": [
+29
+]
+}
+]
+},
+{
+"type": 256,
+"id": 61,
+"name": "#pie_FindWAll",
+"x": 1528,
+"y": 216,
+"plugs": [
+{
+"id": 62,
+"type": 2
+},
+{
+"id": 63,
+"type": 3,
+"trgs": [
+44
+]
+}
+]
+},
+{
+"type": 258,
+"id": 81,
+"name": "#pie",
+"x": 400,
+"y": 216,
+"plugs": [
+{
+"id": 82,
+"type": 2
+},
+{
+"id": 83,
+"type": 3,
+"trgs": [
+50,
+38,
+59
 ]
 }
 ]
 },
 {
 "type": 262,
-"id": 34,
-"name": "#pie2",
-"x": 1216,
+"id": 84,
+"name": "#pie",
+"x": 1784,
 "y": 216,
 "plugs": [
 {
-"id": 35,
+"id": 85,
 "type": 2
 },
 {
-"id": 36,
+"id": 86,
 "type": 3,
 "trgs": [
 15
@@ -278,9 +443,9 @@
 "uid": "R_HOME",
 "graph": {
 "board": {
-"nextid": 19,
-"x": 421,
-"y": 300,
+"nextid": 29,
+"x": 366,
+"y": 336,
 "boxes": [
 {
 "type": 257,
@@ -288,22 +453,6 @@
 "plugs": [
 {
 "id": 2,
-"type": 3
-}
-]
-},
-{
-"type": 781,
-"id": 3,
-"x": 181,
-"y": 22,
-"plugs": [
-{
-"id": 4,
-"type": 2
-},
-{
-"id": 5,
 "type": 3
 }
 ]
@@ -377,6 +526,97 @@
 }
 ],
 "dialog": "D_HERO"
+},
+{
+"type": 1287,
+"id": 19,
+"x": 400,
+"y": 2,
+"plugs": [
+{
+"id": 20,
+"type": 3,
+"trgs": [
+22
+]
+}
+],
+"varCmp": "==",
+"scene": "S_CITY_1",
+"obj": "O_COIN_SILVER"
+},
+{
+"type": 780,
+"id": 21,
+"x": 582,
+"y": 10,
+"plugs": [
+{
+"id": 22,
+"type": 2
+},
+{
+"id": 23,
+"type": 3
+}
+],
+"puzzle": "#pie_GetCoins"
+},
+{
+"type": 1287,
+"id": 24,
+"x": 404,
+"y": 119,
+"plugs": [
+{
+"id": 25,
+"type": 3,
+"trgs": [
+27
+]
+}
+],
+"varCmp": "==",
+"scene": "S_CITY_1",
+"obj": "O_GEMS"
+},
+{
+"type": 780,
+"id": 26,
+"x": 566,
+"y": 119,
+"plugs": [
+{
+"id": 27,
+"type": 2
+},
+{
+"id": 28,
+"type": 3
+}
+],
+"puzzle": "#pie_GetGems"
+}
+]
+}
+}
+},
+{
+"sid": 15,
+"uid": "R_GAME",
+"graph": {
+"board": {
+"nextid": 3,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"plugs": [
+{
+"id": 2,
+"type": 3
+}
+]
 }
 ]
 }
@@ -457,9 +697,9 @@
 "opacitySpeed": 100
 }
 },
-"nextID": 8,
+"nextID": 9,
 "role": "R_HOME",
-"zoom": 40,
+"zoom": 95,
 "x": -56,
 "y": -59
 },
@@ -10823,6 +11063,54 @@
 {},
 {}
 ]
+},
+{
+"uid": "O_GEMS",
+"depths": [
+{
+"a": 200,
+"b": 100
+},
+{
+"y": 1072,
+"a": 200,
+"b": 100
+}
+],
+"id": 8,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 673,
+"y": 570,
+"parallax": 100,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1,
+"grids": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
 }
 ],
 "sid": 1,
@@ -13316,6 +13604,6 @@
 }
 ],
 "meta": {
-"nextAssetID": 15
+"nextAssetID": 16
 }
 }
